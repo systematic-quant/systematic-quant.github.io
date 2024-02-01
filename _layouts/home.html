@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+ 
+<html>
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %}
+
+    <!-- Banner -->
+    <section id="banner" class="major">
+        <div class="inner">
+            <header class="major">
+                <h1>{{ page.landing-title }}</h1>
+            </header>
+            <div class="content">
+                <p>{{ site.description }}</p>
+                <!-- <ul class="actions">
+                    <li><a href="#one" class="button next scrolly">Get Started</a></li>
+                </ul> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- One -->
+        {% include tiles.html %}
+
+        <!-- Two -->
+        <section id="two">
+            <div class="inner">
+                <header class="major">
+                    <h2>Teams</h2>
+                </header>
+                <!-- <p>{{ content }}</p> -->
+                <!-- <ul class="actions">
+                    <li><a href="landing.html" class="button next">Get Started</a></li>
+                </ul> -->
+                <h4>Stone Sun</h4> 
+                <p>
+                    Prior to BrokerQ, Stone headed quantitative
+                    trading business among multi-billion crypto
+                    unicorns such as Matrixport and Babel Finance.
+                    Prior to crypto, he was a quant trader at
+                    Deutsche Bank with particular focus on FICC
+                    systematic strategies and central risk.
+                </p>
+                <h4>Ethan Lee</h4> 
+                <p>
+                    15+ years of experience in quant trading and
+                    algorithmic trading. Prior to cyrpto, He was the
+                    head of Asia FX Algo and FX algo book runner at
+                    Deutsche Bank SG.
+                </p>
+                <h4>Jeff Yu</h4> 
+                <p>
+                    10+ years of experience in machine learning and developing deep learning and AI recommendation models at Sina Weibo.
+                </p>
+                <h4>Chris Lee</h4> 
+                <p>
+                    15+ years of experience in quant research and algorithmic trading. Prior to crypto, he was senior
+                    quantitative researcher building up algorithmic trading business at Barclays.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    {% include footer.html %}
+
+</body>
+
+</html>
