@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-landing-title: 'Hi, my name is Broker-Q'
+landing-title: null
 description: null
 image: null
 author: null
