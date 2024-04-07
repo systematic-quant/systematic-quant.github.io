@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Service
-description: Algo-as-a-Serivce, Broker Trading
+description: Broker-neutral algorithm suites, Quantitative signals, Customized broker trading*
 image: assets/images/pic11.jpg
 nav-menu: true
 ---
