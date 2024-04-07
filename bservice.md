@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Service
-description: Broker-neutral algorithm suites, Quantitative signals, Customized broker trading*
+description: Broker-neutral algorithm suites, \nQuantitative research & signals, \nPrivate broker trading*
 image: assets/images/pic11.jpg
 nav-menu: true
 ---
