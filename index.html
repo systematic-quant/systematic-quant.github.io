@@ -119,6 +119,103 @@ input[type="submit"] {
   font-weight: 600;
   cursor: pointer;
 }
+
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    z-index: 200;
+  }
+
+  nav.nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+  }
+
+  nav.nav.show {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+/* Animated Hamburger Lines */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 201;
+}
+.nav-toggle span {
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+.nav-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+
+  nav.nav {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    transition: right 0.3s ease-in-out;
+  }
+
+  nav.nav.show {
+    right: 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
 </style>
 </head>
 <style>
@@ -210,9 +307,10 @@ input[type="submit"]:hover {
 <header class="header">
 <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
 <div class="logo">
-<img alt="BrokerQ Logo" src="assets/images/logo_new.png"/>
+  <img alt="BrokerQ Logo" src="assets/images/logo_new.png"/>
 </div>
-<nav class="nav">
+<div class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></div>
+<nav class="nav" id="nav-menu">
 <ul>
 <li><a href="#features">Why BrokerQ</a></li>
 <li><a href="#api">Solutions</a></li>
@@ -320,7 +418,7 @@ input[type="submit"]:hover {
 <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: left;">
 <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 30px;">Who We Are</h2>
 <p style="font-size: 1.1rem; max-width: 720px; line-height: 1.6; margin-bottom: 60px;">
-      Founded in 2024, BrokerQ is reimagining digital execution. Built by traders, quants, and engineers, our algorithms turn block trading friction into performance — delivering execution quality that consistently surpasses top market makers, without ever taking custody or control.
+      Founded in 2024, BrokerQ is reimagining digital execution. Built by traders, quants, and engineers, our algorithms turn block trading friction into performance — delivering execution quality that consistently surpasses top market makers and algorithmic traders, without ever taking custody or control.
     </p>
 <div style="display: flex; flex-wrap: wrap; gap: 50px;">
 <div style="flex: 1; min-width: 280px;">
@@ -329,7 +427,7 @@ input[type="submit"]:hover {
 </div>
 <div style="flex: 1; min-width: 280px;">
 <h3 style="font-size: 1.3rem; font-weight: 600; color: #fff;">Institutional DNA</h3>
-<p style="color: #ccc;">With a proven track record managing multi-billion-dollar portfolios, our team brings deep expertise in high-frequency market making, algorithmic trading, statistical arbitrage, and dark pool infrastructure.</p>
+<p style="color: #ccc;">With a proven track record managing multi-billion-dollar crypto portfolios, our team brings deep expertise in high-frequency market making, algorithmic trading, statistical arbitrage, and dark pool infrastructure.</p>
 </div>
 <div style="flex: 1; min-width: 280px;">
 <h3 style="font-size: 1.3rem; font-weight: 600; color: #fff;">Built for Autonomy</h3>
@@ -391,5 +489,18 @@ input[type="submit"]:hover {
 <footer style="text-align: center; padding: 40px 20px; font-size: 0.9rem; color: #666;">
   © 2025, BrokerQ. All rights reserved.
 </footer>
+
+
+<script>
+  const navToggle = document.getElementById("nav-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  navToggle.addEventListener("click", () => {
+    navToggle.classList.toggle("open");
+    navMenu.classList.toggle("show");
+  });
+</script>
+
+
 </body>
 </html>
