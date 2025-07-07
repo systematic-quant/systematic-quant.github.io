@@ -1,12 +1,12 @@
 # site settings
-title: Broker-Q
+title: BrokerQ
 subtitle:
 email: info@broker-q.com
 description: BrokerQ is a crypto quantitative execution business specialized in providing intelligent algorithms to reduce trading cost for large and institutional traders.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author:
-street_address: 3 FRASER STREET 04-23A DUO TOWER SINGAPORE (189352)
+street_address: 
 city: 
 state: 
 zip_code:

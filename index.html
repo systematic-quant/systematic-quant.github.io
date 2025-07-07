@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BrokerQ</title>
+<style>
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
+  color: #111;
+  background-color: #ffffff;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+header.header {
+  background: #ffffff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.nav a {
+  color: #000;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+.hero {
+  background-color: #f5f6f7;
+  color: #000;
+  text-align: center;
+  padding: 100px 20px 120px;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 20px;
+}
+section {
+  padding: 100px 20px;
+}
+.features, .api, .cta-section {
+  background-color: #ffffff;
+}
+.features h2, .api h2, .cta-section h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #000;
+}
+.feature-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.feature {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 350px;
+  border: 1px solid #e2e2e2;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.tab-button {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 18px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+}
+.tab-button.active {
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+.tab-content-container {
+  background: #f9f9f9;
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 0;
+  border: 1px solid #ddd;
+}
+form {
+  background: #fff;
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid #eee;
+}
+input, textarea {
+  padding: 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+input[type="submit"] {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+</style>
+</head>
+<style>
+/* BrokerQ Clean Tech Theme */
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+.nav li {
+  margin: 0;
+}
+.nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+}
+.hero {
+  background: url('/assets/hero-bg.jpg') center center / cover no-repeat;
+  position: relative;
+  padding: 160px 20px;
+  color: #000;
+  text-align: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 0;
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+section {
+  padding: 100px 0;
+}
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
+}
+input, textarea {
+  padding: 12px;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+input[type="submit"] {
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  padding: 14px;
+  border: none;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background: #333;
+}
+</style>
+<body>
+<header class="header">
+<div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+<div class="logo">
+<img alt="BrokerQ Logo" src="assets/images/logo_new.png"/>
+</div>
+<nav class="nav">
+<ul>
+<li><a href="#features">Why BrokerQ</a></li>
+<li><a href="#api">Solutions</a></li>
+<li><a href="#institutional">Institutions</a></li>
+<li><a href="#about">About</a></li>
+<li><a class="btn-outline" href="#contact-form">Try Demo</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<section class="hero" style="background: url('assets/images/hero-bg.jpg') center center / cover no-repeat; padding: 160px 20px; color: #fff; position: relative;">
+<div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 0;"></div>
+<div class="container" style="position: relative; z-index: 1; text-align: center;">
+<h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 20px;">Trade Smarter with BrokerQ</h1>
+<p style="font-size: 1.2rem; max-width: 700px; margin: auto; color: #ddd;">
+      Ultra-high performance execution. Inspired by math. Powered by intelligence.
+    </p>
+</div>
+</section>
+<section class="features container animate" id="features">
+<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">Why Choose BrokerQ</h2>
+<div class="modern-feature-grid">
+<div class="modern-feature-card">
+<div class="icon-circle">
+<svg fill="none" height="28" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 3v18h18"></path>
+<path d="M18 17V9M13 17V5M8 17v-3"></path>
+</svg>
+</div>
+<h3>Outperformance</h3>
+<p>150+ bps ahead of top market makers, fueled by a relentless obsession with performance and a culture of constant reinvention.</p>
+</div>
+<div class="modern-feature-card">
+<div class="icon-circle">
+<svg fill="none" height="28" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+<polyline points="4 12 8 12 10 8 14 16 16 12 20 12"></polyline>
+</svg>
+</div>
+<h3>Built-in Alpha</h3>
+<p>Every execution embeds HFT alpha — turning costs into yield, not just passively slicing.</p>
+</div>
+<div class="modern-feature-card">
+<div class="icon-circle">
+<svg fill="none" height="28" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg>
+</div>
+<h3>True Transparency</h3>
+<p>Trade on your own accounts. No transfers, no custody risk. Full privacy and control by design.</p>
+</div>
+</div>
+</section>
+<section class="api container animate" id="api">
+<h2 style="text-align: center;">Solutions</h2>
+<div class="tabs">
+<button class="tab-button active" data-tab="direct">BrokerQ Direct</button>
+<button class="tab-button" data-tab="api-tab">API</button>
+<button class="tab-button" data-tab="start">Getting Started</button>
+</div>
+<div class="tab-content-container">
+<div class="tab-content active show" id="direct" style="display: block;">
+<h3>BrokerQ Direct</h3>
+<p>BrokerQ’s algorithms operate directly on clients’ exchange accounts—no asset transfers, no custody, no counterparties. Our engine acts as a virtual trader, executing autonomously via API in a transparent, auditable environment.</p>
+</div>
+<div class="tab-content" id="api-tab" style="display: none;">
+<h3>API</h3>
+<p>Seamless API integration provides maximum privacy, control, and compliance with local KYC and security standards. Deploy quickly via plug-and-play or integrate with your preferred platform, or EMS/OMS.</p>
+</div>
+<div class="tab-content" id="start" style="display: none;">
+<h3>Getting Started</h3>
+<p>
+        Step 1: Book a demo with the BrokerQ team<br/>
+        Step 2: Connect your exchange sub-accounts or EMS/OMS APIs<br/>
+        Step 3: Let BrokerQ execute on your behalf via secure APIs
+      </p>
+</div>
+</div>
+</section>
+<section id="institutional" style="background-color: #f7f8fa; padding: 80px 20px;">
+<div class="container" style="max-width: 1200px; margin: 0 auto;">
+<div style="max-width: 700px;">
+<h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; color: #111;">Built for Institutions</h2>
+<p style="font-size: 1.1rem; color: #444;">
+        BrokerQ empowers hedge funds, trading firms, asset managers, corporates, and family offices with industrial-grade execution infrastructure.
+        Engineered for scale. Driven by alpha. Designed for control.
+      </p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 40px; margin-top: 60px;">
+<div style="flex: 1; min-width: 280px;">
+<h3 style="font-size: 1.3rem; font-weight: 600; color: #000;">Alpha Execution Engine</h3>
+<p style="color: #555;">Block-trade optimized algos eliminate slippage and embed yield into every order — built for precision and speed.</p>
+</div>
+<div style="flex: 1; min-width: 280px;">
+<h3 style="font-size: 1.3rem; font-weight: 600; color: #000;">Quantitative Partnership</h3>
+<p style="color: #555;">We act as your outsourced quant team—customizing solutions to fit your strategy and maximize execution performance.</p>
+</div>
+<div style="flex: 1; min-width: 280px;">
+<h3 style="font-size: 1.3rem; font-weight: 600; color: #000;">Regulatory &amp; Reporting</h3>
+<p style="color: #555;">Full audit trail, white-label APIs, and integration with EMS/OMS tools. Built for compliance and visibility.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="about" style="background: #000; color: #fff; padding: 100px 20px;">
+<div class="container" style="max-width: 1200px; margin: 0 auto; text-align: left;">
+<h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 30px;">Who We Are</h2>
+<p style="font-size: 1.1rem; max-width: 720px; line-height: 1.6; margin-bottom: 60px;">
+      Founded in 2024, BrokerQ is reimagining digital execution. Built by traders, quants, and engineers, our algorithms turn block trading friction into performance — delivering execution quality that consistently surpasses top market makers, without ever taking custody or control.
+    </p>
+<div style="display: flex; flex-wrap: wrap; gap: 50px;">
+<div style="flex: 1; min-width: 280px;">
+<h3 style="font-size: 1.3rem; font-weight: 600; color: #fff;">Proven Performance</h3>
+<p style="color: #ccc;">First trading firm in history to achieve <strong>negative slippage</strong> on large block trades — flipping execution cost into yield.</p>
+</div>
+<div style="flex: 1; min-width: 280px;">
+<h3 style="font-size: 1.3rem; font-weight: 600; color: #fff;">Institutional DNA</h3>
+<p style="color: #ccc;">With a proven track record managing multi-billion-dollar portfolios, our team brings deep expertise in high-frequency market making, algorithmic trading, statistical arbitrage, and dark pool infrastructure.</p>
+</div>
+<div style="flex: 1; min-width: 280px;">
+<h3 style="font-size: 1.3rem; font-weight: 600; color: #fff;">Built for Autonomy</h3>
+<p style="color: #ccc;">We operate on your exchange accounts — no custody, no transfers, no risk. Just results.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-section container animate" id="contact-form">
+<h2>Try Demo   |   Contact Sales</h2>
+<form action="https://formspree.io/f/mqabojbn" method="POST">
+<input name="name" placeholder="Full Name" required="" type="text"/>
+<input name="email" placeholder="Work Email" required="" type="email"/>
+<input name="phone" placeholder="Phone Number" type="tel"/>
+<textarea name="message" placeholder="How can we help you?" rows="4"></textarea>
+<input type="submit" value="Submit Request"/>
+</form>
+</section>
+<script>
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const tabId = button.getAttribute("data-tab");
+
+      tabButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      tabContents.forEach(content => {
+        content.classList.remove("active", "show");
+        content.style.display = "none";
+      });
+
+      const target = document.getElementById(tabId);
+      target.style.display = "block";
+      target.classList.add("active");
+
+      setTimeout(() => {
+        target.classList.add("show");
+      }, 50);
+    });
+  });
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const features = document.querySelectorAll('.modern-feature-card');
+    const options = { threshold: 0.2 };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, options);
+    features.forEach(card => observer.observe(card));
+  });
+</script>
+<footer style="text-align: center; padding: 40px 20px; font-size: 0.9rem; color: #666;">
+  © 2025, BrokerQ. All rights reserved.
+</footer>
+</body>
+</html>
